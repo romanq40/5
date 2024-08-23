@@ -1,7 +1,5 @@
 from random import choice
 
-count = 3
-max_wrong = count - 1
 WORDS = ("python", "игра", "программирование")  
 
 word = choice(WORDS)  
@@ -9,7 +7,7 @@ text  = "_" * len(word)
 wrong = 0  
 list = []
 
-while wrong < max_wrong and text != word:
+while wrong < 3 and text != word:
     print(text)
     guess = input("\n\nВведите свое предположение: ")  
     
@@ -29,7 +27,7 @@ while wrong < max_wrong and text != word:
         print(  guess + " нет в слове.")  
         wrong += 1
 
-if wrong == max_wrong:  
+if wrong == 3:  
     print("Вы проиграли")
 else:  
     print("\nВы угадали слово!")
