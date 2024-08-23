@@ -5,13 +5,11 @@ WORDS = ("python", "игра", "программирование")
 word = choice(WORDS)  
 text  = "_" * len(word)  
 wrong = 0  
-list = []
 
 while wrong < 3 and text != word:
     print(text)
-    guess = input("\n\nВведите свое предположение: ")  
+    guess = input("\n\nВведите свое предположение: ")    
     
-    list.append(guess)
     
     if guess in word:  
         print("\nДа!", guess, "есть в слове!")
